@@ -1,0 +1,2 @@
+class PizzaPrice < ApplicationRecord
+end
