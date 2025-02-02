@@ -6,7 +6,7 @@ class PizzaOrder < ApplicationRecord
 	has_many :topping_orders
 	has_many :toppings, through: :topping_orders
 
-	enum size: { regular: 0, medium: 1, large: 2 }
+	enum :size, { regular: 0, medium: 1, large: 2 }
 
 	validates :quantity, presence: true, numericality: { greater_than: 0 }
 end

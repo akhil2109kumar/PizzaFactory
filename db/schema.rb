@@ -81,11 +81,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_01_195306) do
   end
 
   create_table "topping_orders", force: :cascade do |t|
-    t.integer "order_pizza_id"
+    t.integer "pizza_order_id"
     t.integer "topping_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["order_pizza_id"], name: "index_topping_orders_on_order_pizza_id"
+    t.index ["pizza_order_id"], name: "index_topping_orders_on_pizza_order_id"
     t.index ["topping_id"], name: "index_topping_orders_on_topping_id"
   end
 
@@ -118,6 +118,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_01_195306) do
   add_foreign_key "pizza_prices", "pizzas"
   add_foreign_key "side_orders", "orders"
   add_foreign_key "side_orders", "sides"
-  add_foreign_key "topping_orders", "order_pizzas"
+  add_foreign_key "topping_orders", "pizza_orders"
   add_foreign_key "topping_orders", "toppings"
 end
