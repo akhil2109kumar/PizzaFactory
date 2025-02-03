@@ -1,8 +1,6 @@
 class Order < ApplicationRecord
-	has_many :pizza_orders
-	has_many :pizzas, through: :pizza_orders
-	has_many :side_orders
-	has_many :sides, through: :side_orders
-
+	belongs_to :user
+	belongs_to :cart_item
+	enum :status, { pending: 0, confirmed: 1 }
 	validates :status, presence: true
 end

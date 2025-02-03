@@ -1,7 +1,8 @@
 class CreatePizzaOrders < ActiveRecord::Migration[8.0]
   def change
     create_table :pizza_orders do |t|
-      t.references "order", foreign_key: true
+      t.references "user", foreign_key: true
+      t.references "cart_item", foreign_key: true
       t.references "pizza", foreign_key: true
       t.references "crust", foreign_key: true
       t.integer "size", null: false 

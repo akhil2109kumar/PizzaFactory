@@ -1,6 +1,11 @@
 class SideOrder < ApplicationRecord
-	belongs_to :order_pizza
-	belongs_to :topping
+	belongs_to :cart_item
+	belongs_to :user
+	belongs_to :side
 
-	validates :topping_id, uniqueness: { scope: :order_pizza_id }
+	before_save :add_price
+	
+	def add_price
+		self.price = self.side.price * self.quantity
+	end
 end

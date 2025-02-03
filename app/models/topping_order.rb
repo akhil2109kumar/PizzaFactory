@@ -1,6 +1,6 @@
 class ToppingOrder < ApplicationRecord
-	belongs_to :order_pizza
+	belongs_to :pizza_order
 	belongs_to :topping
 
-	validates :topping_id, uniqueness: { scope: :order_pizza_id }
+	validates :topping_id, uniqueness: { scope: :pizza_order_id }
 end
