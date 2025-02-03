@@ -30,4 +30,7 @@ Follow these steps to set up and run the application locally.
 	
 	rails s
 
+### 5. Import collection
+	https://api.postman.com/collections/29608876-ec955fdf-61ee-4785-b677-070ebba6672b?access_key=PMAT-01JK6DRG56FDZDN0K34FMW1YHY
+
 
