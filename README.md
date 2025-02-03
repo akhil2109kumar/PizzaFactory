@@ -12,7 +12,7 @@ Brief description of your project.
 Follow these steps to set up and run the application locally.
 
 ### 1. Clone the Repository
-
+	git clone https://github.com/akhil2109kumar/PizzaFactory.git
 	cd your-repo
 
 ### 2. Install Dependencies
